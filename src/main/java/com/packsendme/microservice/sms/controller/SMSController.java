@@ -31,14 +31,14 @@ public class SMSController {
 		return smsService.createSMSCode(username);
 	}
 
-	@GetMapping("/sms/{username}")
+	@GetMapping("/sms/{username}/{smscode}")
 	public ResponseEntity<?> validateSMSCode(@Validated @PathVariable("username") String username, 
 			@Validated @PathVariable("smscode") String smscode) throws Exception {
 		return smsService.findSMSCode(username,smscode);
 	}
 	
 	
-	@DeleteMapping("/sms/{username}")
+	@DeleteMapping("/sms/{username}/{smscode}")
 	public ResponseEntity<?> deleteSMSCode(@Validated @PathVariable("username") String username, 
 			@Validated @PathVariable("smscode") String smscode) throws Exception {
 		return smsService.deleteSMSCode(username,smscode);

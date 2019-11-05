@@ -15,7 +15,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import com.packsendme.lib.common.constants.HttpExceptionPackSend;
 import com.packsendme.lib.common.response.Response;
-import com.packsendme.lib.utility.ConvertFormat;
 import com.packsendme.microservice.sms.component.GeneratorSMSCode;
 import com.packsendme.microservice.sms.dto.SMSDto;
 
@@ -24,11 +23,7 @@ import com.packsendme.microservice.sms.dto.SMSDto;
 @CacheConfig(cacheNames = "SMSCache")
 public class SMSCacheService {
 
-	@Autowired
-	ConvertFormat formatObj;
-	
 	private static Map<String, SMSDto> storeSMS = new HashMap<String, SMSDto>();
-
     
     @Autowired
     private GeneratorSMSCode generatorSMSObj;

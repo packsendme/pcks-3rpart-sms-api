@@ -65,7 +65,7 @@ public class SMSCacheService {
 
 		try{
 			System.out.println("CreateCache-- Creating :: ");
-            Thread.sleep(1000); 
+            //Thread.sleep(1000); 
             storeSMS.put(smscode,new SMSDto(smscode, timeCreate.getTime()));
 			smsObj = storeSMS.get(smscode);
 			System.out.println("CreateCache-Username ...:: OK :: smsCode "+ smscode);

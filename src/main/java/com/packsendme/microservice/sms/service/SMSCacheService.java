@@ -106,7 +106,7 @@ public class SMSCacheService {
 	    	System.out.println("-----------------------------------------------------------");
 	    	System.out.println("find...:: USERNAME_NEW :: "+ smscode);
 	    	System.out.println("-----------------------------------------------------------");
-			Thread.sleep(1000); 
+			//Thread.sleep(1000); 
 	     
 			smsObj = storeSMS.get(smscode);
 			if(smsObj != null) {

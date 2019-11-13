@@ -84,7 +84,7 @@ public class SMSCacheService {
 			
 			if(smsObj != null) {
 				responseSMS = new Response<SMSDto>(0,HttpExceptionPackSend.FOUND_SMS_CODE.getAction(), smsObj); 
-				return new ResponseEntity<>(responseSMS, HttpStatus.FOUND);
+				return new ResponseEntity<>(responseSMS, HttpStatus.OK);
 			}
 			else {
 				responseSMS = new Response<SMSDto>(0,HttpExceptionPackSend.FOUND_SMS_CODE.getAction(), smsObj); 

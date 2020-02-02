@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        NAME_CONTAINER = "psm-microservice-sms"
-        NAME_IMAGE = "microservice-sms:1"
+        NAME_CONTAINER = "sms-microservice-psm"
+        NAME_IMAGE = "sms-image-psm:1"
         ID_CONTAINER = null 
         PORT_CONTAINER = "9097:9097"
     }

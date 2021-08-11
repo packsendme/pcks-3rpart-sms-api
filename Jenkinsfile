@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     environment {
-        NAME_CONTAINER = "sms-microservice-psm"
-        NAME_IMAGE = "sms-image-psm:1"
-        ID_CONTAINER = null 
+        NAME_CONTAINER = "pcks-3rpart-sms-api"
+        NAME_IMAGE = "pcks-3rpart-sms-img:1"
+        ID_CONTAINER = null
         PORT_CONTAINER = "9097:9097"
     }
 
     stages {
-        
+
         stage('Git Checkout Repositorio') {
             steps {
                 git branch: 'develop',
-                url: 'https://github.com/packsendme/packsendme-sms-server.git'
+                url: 'https://github.com/packsendme/pcks-3rpart-sms-api.git'
             }
         }
         stage('Java Build') {
@@ -21,7 +21,7 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-    
+
         stage("Docker Delopy - Check Container") {
             steps {
                 script {
@@ -30,9 +30,9 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Docker Delopy  - Stop Container") {
-           when { 
+           when {
                allOf {
                         expression { ID_CONTAINER != null }
                         expression { ID_CONTAINER != "" }
@@ -54,6 +54,6 @@ pipeline {
                 }
             }
         }
-        
+
     }
 }

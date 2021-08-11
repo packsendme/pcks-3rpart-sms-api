@@ -13,7 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import com.packsendme.lib.common.constants.HttpExceptionPackSend;
+
+import com.packsendme.lib.common.constants.generic.HttpExceptionPackSend;
 import com.packsendme.lib.common.response.Response;
 import com.packsendme.microservice.sms.component.GeneratorSMSCode;
 import com.packsendme.microservice.sms.dto.SMSDto;

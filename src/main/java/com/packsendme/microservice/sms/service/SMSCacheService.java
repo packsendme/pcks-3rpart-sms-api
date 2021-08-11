@@ -38,6 +38,11 @@ public class SMSCacheService {
 		String smscode = generatorSMSObj.generateSMSCode();
 		String smscodeFormat = username+smscode;
 		
+		System.out.println("-----------------------------------------");
+		System.out.println("createSMSCode--Username+SMS :: "+ smscode);
+		System.out.println("-----------------------------------------");
+
+		
 		try{
 			smsObj = createSMSCodeCache(smscodeFormat);
 			if(smsObj != null) {

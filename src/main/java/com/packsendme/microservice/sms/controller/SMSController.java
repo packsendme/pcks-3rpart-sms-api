@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import com.packsendme.microservice.sms.service.SMSCacheService;
 
-@RestController("/3rpart/sms")
+@RestController("/threepart/sms")
 public class SMSController {
 	
 	@Autowired

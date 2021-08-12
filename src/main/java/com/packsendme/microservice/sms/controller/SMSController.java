@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import com.packsendme.microservice.sms.service.SMSCacheService;
 
-@RestController("/threepart/sms")
+@RestController("/3rpart/sms")
 public class SMSController {
 	
 	@Autowired
@@ -35,5 +35,10 @@ public class SMSController {
 	public ResponseEntity<?> deleteSMSCode(@Validated @PathVariable("username") String username, 
 			@Validated @PathVariable("smscode") String smscode) throws Exception {
 		return smsService.deleteSMSCode(username,smscode);
+	}
+	
+	@GetMapping("/get")
+	public String teste() {
+		return " GET ";
 	}
 }

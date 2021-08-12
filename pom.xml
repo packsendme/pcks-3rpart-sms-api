@@ -7,9 +7,7 @@
 	<artifactId>pcks-3rpart-sms-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>pcks-3rpart-sms-api</name>
-	<description>Project SMS for PackSendME</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -111,10 +109,10 @@
 
 	<build>
 	    <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-        </resource>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <filtering>true</filtering>
+	        </resource>
     </resources>
 		<plugins>
 			<plugin>

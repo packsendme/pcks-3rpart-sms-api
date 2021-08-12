@@ -39,6 +39,8 @@ public class SMSController {
 	
 	@GetMapping("/get")
 	public String teste() {
+		System.out.println(" ");
+		System.out.println("+++++++++++++++ GET ++++++++++++++++");
 		return " GET ";
 	}
 }

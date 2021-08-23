@@ -15,10 +15,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class MicroserviceSMSServerApplication {
 
 	public static void main(String[] args) {
-		System.out.println("------------------------------------------------");
-		System.out.println(" MicroserviceSMSServerApplication  ");
-		System.out.println("------------------------------------------------");
-
 		SpringApplication.run(MicroserviceSMSServerApplication.class, args);
 	}
 	
